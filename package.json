@@ -5,6 +5,14 @@
   "version": "0.1.0",
   "publisher": "yourname",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kino-poi/usage-bar-for-claude-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kino-poi/usage-bar-for-claude-code/issues"
+  },
+  "homepage": "https://github.com/kino-poi/usage-bar-for-claude-code#readme",
   "engines": {
     "vscode": "^1.98.0"
   },
@@ -46,14 +54,14 @@
           "default": 80,
           "minimum": 0,
           "maximum": 100,
-          "description": "Usage percentage (0-100) at which the status bar item switches to the warning (yellow) background color."
+          "description": "Usage percentage (0-100) at which that window (5h/7d) gets the 🟡 warning marker."
         },
         "usageBar.criticalThreshold": {
           "type": "number",
           "default": 95,
           "minimum": 0,
           "maximum": 100,
-          "description": "Usage percentage (0-100) at which the status bar item switches to the critical (red) background color."
+          "description": "Usage percentage (0-100) at which that window (5h/7d) gets the 🔴 critical marker."
         },
         "usageBar.pollIntervalSeconds": {
           "type": "number",
