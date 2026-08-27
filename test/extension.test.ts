@@ -12,7 +12,7 @@ import * as vscode from 'vscode';
  */
 suite('Usage Bar for Claude Code', () => {
   test('activates without throwing', async () => {
-    const ext = vscode.extensions.getExtension('yourname.usage-bar-for-claude-code');
+    const ext = vscode.extensions.getExtension('kino-poi.usage-bar-for-claude-code');
     assert.ok(ext, 'extension should be discoverable by id');
     await ext?.activate();
     assert.ok(ext?.isActive);
