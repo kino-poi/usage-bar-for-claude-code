@@ -1,0 +1,29 @@
+name: Publish
+
+# Scaffold only: this repo currently uses a placeholder `publisher` ("yourname")
+# in package.json, so this workflow is not wired to run automatically anywhere.
+# Once a real Marketplace publisher is registered and VSCE_PAT is added as a
+# repository secret, tagging a release (e.g. `git tag v0.1.0 && git push --tags`)
+# will publish that build.
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:unit
+      - run: npx vsce publish --pat ${{ secrets.VSCE_PAT }}

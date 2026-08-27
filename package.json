@@ -1,0 +1,100 @@
+{
+  "name": "usage-bar-for-claude-code",
+  "displayName": "Usage Bar for Claude Code",
+  "description": "Shows Claude Code's 5-hour and 7-day rate limit usage in the VS Code status bar, sourced from Claude Code's statusLine hook.",
+  "version": "0.1.0",
+  "publisher": "yourname",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "claude",
+    "claude code",
+    "status bar",
+    "usage",
+    "rate limit"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "usage-bar.showDetails",
+        "title": "Usage Bar: Show Usage Details"
+      },
+      {
+        "command": "usage-bar.setupBridge",
+        "title": "Usage Bar: Setup Claude Code Bridge"
+      }
+    ],
+    "configuration": {
+      "title": "Usage Bar for Claude Code",
+      "properties": {
+        "usageBar.sharedFilePath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the shared JSON file written by the Claude Code statusLine bridge script. Empty = use CLAUDE_USAGE_BRIDGE_PATH env var if set, otherwise ~/.claude/vscode-usage-bridge.json."
+        },
+        "usageBar.warningThreshold": {
+          "type": "number",
+          "default": 80,
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Usage percentage (0-100) at which the status bar item switches to the warning (yellow) background color."
+        },
+        "usageBar.criticalThreshold": {
+          "type": "number",
+          "default": 95,
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Usage percentage (0-100) at which the status bar item switches to the critical (red) background color."
+        },
+        "usageBar.pollIntervalSeconds": {
+          "type": "number",
+          "default": 5,
+          "minimum": 1,
+          "description": "Fallback polling interval (seconds) used in addition to fs.watch, in case file-system watching is unreliable (e.g. some Windows/network-drive setups)."
+        },
+        "usageBar.staleAfterMinutes": {
+          "type": "number",
+          "default": 30,
+          "minimum": 1,
+          "description": "If the shared file hasn't been updated for this many minutes, the status bar marks the data as possibly stale."
+        },
+        "usageBar.autoSetupBridge": {
+          "type": "boolean",
+          "default": true,
+          "description": "Offer to automatically configure the Claude Code statusLine bridge script on first activation."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "node esbuild.js --production",
+    "typecheck": "tsc --noEmit -p ./",
+    "lint": "eslint src test --ext .ts",
+    "test:unit": "node --test test/*.test.mjs",
+    "pretest": "npm run compile",
+    "test": "npm run typecheck && npm run lint && npm run test:unit",
+    "vscode:prepublish": "npm run package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.98.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "@vscode/test-electron": "^2.4.0",
+    "@vscode/vsce": "^3.1.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^8.57.0",
+    "typescript": "^5.5.4"
+  }
+}
