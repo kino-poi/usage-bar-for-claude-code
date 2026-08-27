@@ -1,19 +1,26 @@
-name: Bug report
-description: Something isn't working as expected
-labels: [bug]
+name: バグ報告 / Bug Report
+description: 動作の不具合を報告する / Report something that isn't working
+title: "[Bug] "
+labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます！日本語・英語どちらでも構いません。
+        Thank you for reporting a bug! Feel free to write in Japanese or English.
+
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: What did you expect instead?
+      label: 現象 / What happened
+      description: 何が起きたか、何を期待していたか / What happened, and what did you expect instead?
     validations:
       required: true
 
   - type: textarea
     id: repro
     attributes:
-      label: Steps to reproduce
+      label: 再現手順 / Steps to reproduce
       placeholder: |
         1. ...
         2. ...
@@ -23,23 +30,23 @@ body:
   - type: input
     id: extension-version
     attributes:
-      label: Extension version
-      placeholder: e.g. 0.1.0 (Extensions view → Usage Bar for Claude Code)
+      label: 拡張機能のバージョン / Extension version
+      placeholder: 例 / e.g. 0.1.0（拡張機能ビューで確認 / see the Extensions view）
     validations:
       required: true
 
   - type: input
     id: vscode-version
     attributes:
-      label: VS Code version
-      placeholder: Help > About
+      label: VS Codeのバージョン / VS Code version
+      placeholder: ヘルプ > バージョン情報 / Help > About
     validations:
       required: true
 
   - type: input
     id: claude-code-version
     attributes:
-      label: Claude Code version
+      label: Claude Codeのバージョン / Claude Code version
       placeholder: claude --version
     validations:
       required: false
@@ -59,8 +66,8 @@ body:
   - type: textarea
     id: shared-file
     attributes:
-      label: Contents of the shared bridge file, if relevant
-      description: Default location is `~/.claude/vscode-usage-bridge.json`. Redact anything you don't want to share — only `used_percentage`/`resets_at`/`updated_at` are needed.
+      label: 共有ブリッジファイルの内容（関係あれば） / Contents of the shared bridge file, if relevant
+      description: デフォルトの場所は `~/.claude/vscode-usage-bridge.json` です。`used_percentage`/`resets_at`/`updated_at` 以外は共有不要なので伏せて構いません。 / Default location is `~/.claude/vscode-usage-bridge.json`. Redact anything you don't want to share — only `used_percentage`/`resets_at`/`updated_at` are needed.
       render: json
     validations:
       required: false

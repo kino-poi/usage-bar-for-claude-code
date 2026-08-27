@@ -1,25 +1,32 @@
-name: Feature request
-description: Suggest an idea or improvement
-labels: [enhancement]
+name: 機能要望 / Feature Request
+description: アイデアや改善を提案する / Suggest an idea or improvement
+title: "[Feature] "
+labels: ["enhancement"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        提案ありがとうございます！日本語・英語どちらでも構いません。
+        Thank you for your suggestion! Feel free to write in Japanese or English.
+
+        > **Note:** Usage Credits（追加購入クレジット残高）の可視化はスコープ外です（CLI・APIどちらにも公開フィールドが無いため）。詳細は `docs/DESIGN.md` 1章を参照してください。
+        > Visualizing Usage Credits (purchased top-up credit balance) is out of scope — neither the CLI nor the API exposes a field for it. See `docs/DESIGN.md` section 1 for details.
+
   - type: textarea
     id: problem
     attributes:
-      label: What problem would this solve?
+      label: 解決したい課題 / Problem to solve
+      description: どんな場面で困っているか / What problem would this solve?
     validations:
       required: true
 
   - type: textarea
     id: proposal
     attributes:
-      label: Proposed solution
-      description: How would this look/behave? Rough sketches or examples welcome.
-    validations:
-      required: false
+      label: 提案する解決策 / Proposed solution
+      description: どう動いてほしいか。簡単なスケッチや例があれば歓迎です / How would this look/behave? Rough sketches or examples welcome.
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives considered
-    validations:
-      required: false
+      label: 検討した代替案 / Alternatives considered

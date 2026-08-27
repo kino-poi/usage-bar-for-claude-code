@@ -1,7 +1,10 @@
 # Changelog
 
+このファイルにはプロジェクトの全notable変更を記録します。
 All notable changes to this project are documented in this file.
 
+形式は [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) に準拠し、
+バージョニングは [Semantic Versioning](https://semver.org/) に従います。
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
@@ -9,14 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- Status bar item showing Claude Code's 5-hour and 7-day rate limit usage
-  (`$(clock) 5h NN%  $(calendar) 7d NN%`), sourced from the `statusLine` hook's
-  `rate_limits` field via a bridge script and a shared JSON file.
-- File-watch (with polling fallback) based live updates.
-- Guided, opt-in setup of the Claude Code `statusLine` bridge, wrapping any
-  pre-existing `statusLine` command instead of replacing it.
-- Per-window severity markers (🟡 warning / 🔴 critical), independent for 5h
-  and 7d — see [`docs/DESIGN.md`](docs/DESIGN.md) section 4 for why this
-  isn't a shared background color.
-- `usageBar.*` settings for the shared file path, thresholds, poll interval,
-  stale-data threshold, and auto-setup toggle.
+- Claude Codeの5時間/7日レート制限使用率を表示するステータスバーアイテム
+  （`$(clock) 5h NN%  $(calendar) 7d NN%`）。`statusLine`フックの`rate_limits`を
+  ブリッジスクリプト＋共有JSONファイル経由で取得する。
+- ファイル監視（ポーリングをフォールバックとして併用）によるリアルタイム更新。
+- Claude Code側`statusLine`ブリッジのガイド付き・オプトインセットアップ。既存の
+  `statusLine`コマンドは置き換えず、ラップして保持する。
+- 5h/7dそれぞれ独立の深刻度マーカー（🟡警告 / 🔴危険）。単一の背景色を使わない
+  理由は[`docs/DESIGN.md`](docs/DESIGN.md) 4章を参照。
+- 共有ファイルのパス・閾値・ポーリング間隔・古いデータ判定・自動セットアップの
+  オンオフを設定できる`usageBar.*`設定群。
