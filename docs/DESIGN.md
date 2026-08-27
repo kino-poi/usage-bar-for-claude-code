@@ -124,6 +124,20 @@ interface BridgeData {       // ~/.claude/vscode-usage-bridge.json の内容
 - **Decision:** ②。`resources/bridge-statusline.js`が共有ファイルを読み直し、新しい値がある方だけ更新する。
 - **Rationale:** ①だと、値が一瞬でも欠損するたびにステータスバーが`N/A`にちらつく。UXとして前回値を保持する方が実用的。
 
+### 4.7 ドキュメントの言語ポリシー: `docs/`は日本語のみ、GitHub向けファイルはJP/EN併記
+
+- **Status:** 確定
+- **Background:** ユーザーの別プロジェクト `linkle-notes` で細かく検討済みの言語ポリシーがあり、それを踏襲するよう明示的に指示された。
+- **Decision:**
+  - `docs/`配下（本書のような内部設計文書）は**日本語のみ**。ファイル名は英語snake_case。
+  - README・CONTRIBUTING・SECURITY・Issue/PRテンプレートなどGitHub上で外部から見える文書は**JP/EN併記**（見出しは「日本語 / English」、本文は日本語の後に英語を続ける）。
+  - CODE_OF_CONDUCTは冒頭のみ併記し、Contributor Covenant本文は英語原文をそのまま掲載（自前翻訳しない。公式日本語訳へのリンクのみ添える）。
+  - LICENSEは英語を正文のまま維持し、`LICENSE.ja.md`を非拘束の参考訳として別ファイルで追加する。
+  - コミットメッセージは`type(scope):`を英語、説明は「日本語 / English」併記。
+  - Issue/PRテンプレートには「日本語・英語どちらでも構いません」という一言を必ず添える。
+- **Rationale:** 内部設計文書は保守者（日本語話者）の生産性を優先して単一言語にする一方、外部から見えるファイルは英語圏の読者・コントリビューターも取りこぼさないようにする、という使い分け。長大な標準文書（Contributor Covenant等）を自前翻訳しないのは、翻訳の保守コストと品質劣化リスクを避けるため。
+- **Consequences:** GitHub向けファイルは常に2言語分のメンテナンスコストがかかる。今後内容を変更する際はJP/EN両方を同時に更新すること。
+
 ---
 
 ## 5. 既知の制約の技術的背景
@@ -141,3 +155,4 @@ interface BridgeData {       // ~/.claude/vscode-usage-bridge.json の内容
 | 日付 | 変更内容 |
 |---|---|
 | 2026-08-28 | 新規作成。`tmp/SPEC.md`（旧`docs/SPEC.md`）に代わる保守文書として、実装済みの設計・意思決定を記録。 |
+| 2026-08-28 | 4.7として言語ポリシーを追加し、README・CONTRIBUTING・SECURITY・CODE_OF_CONDUCT・Issue/PRテンプレートをJP/EN併記に、LICENSE.ja.mdを新規追加。 |
