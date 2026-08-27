@@ -1,10 +1,13 @@
 name: Publish
 
-# Scaffold only: this repo currently uses a placeholder `publisher` ("yourname")
-# in package.json, so this workflow is not wired to run automatically anywhere.
-# Once a real Marketplace publisher is registered and VSCE_PAT is added as a
-# repository secret, tagging a release (e.g. `git tag v0.1.0 && git push --tags`)
-# will publish that build.
+# Scaffold only: `publisher` (kino-poi) is registered, but VSCE_PAT is not set up
+# yet as a repository secret, so this workflow doesn't run automatically yet.
+# Generating that PAT requires an Azure DevOps organization linked to an Azure
+# subscription, which free-trial subscriptions don't support as of writing — for
+# now, releases are published manually via `npm run package` + uploading the
+# resulting .vsix at https://marketplace.visualstudio.com/manage. Once VSCE_PAT
+# is added as a repository secret, tagging a release (e.g. `git tag v0.1.0 &&
+# git push --tags`) will publish that build automatically instead.
 on:
   push:
     tags:
