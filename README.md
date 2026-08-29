@@ -1,5 +1,7 @@
 # Usage Bar for Claude Code
 
+[VS Code Marketplaceで見る / View on VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=kino-poi.usage-bar-for-claude-code)
+
 Claude Codeの **5時間セッション** / **週間(7日)** のレート制限使用率を、VS Codeのステータスバーに常時表示するVS Code拡張機能です。
 
 A VS Code extension that shows Claude Code's **5-hour session** / **weekly (7-day)** rate limit usage in the status bar at all times.
