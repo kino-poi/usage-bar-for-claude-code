@@ -190,7 +190,7 @@ For a final check, we recommend manually confirming that the numbers follow alon
 
 ## アイコンについて / About the icon
 
-`package.json` に `icon` フィールドは設定していません（`icon.png` は未作成）。Marketplace公開前に、商標に配慮した独自の128x128アイコンを用意し `icon.png` として追加のうえ `package.json` に `"icon": "icon.png"` を設定してください。`resources/icons/` も同様の理由で未使用です（ステータスバー表示はVS Code標準のcodicon `$(clock)` / `$(calendar)` / `$(warning)` / `$(circle-slash)` のみで構成しています）。
+`icon.png`（128x128、リポジトリルート）を独自デザインで用意し、`package.json` の `icon` フィールドに設定済みです。Anthropic/Claudeの公式ブランドカラー・ロゴ形状は使用していません。元のベクター版は `resources/icon.svg` にあります。`resources/icons/` は未使用です（ステータスバー表示はVS Code標準のcodicon `$(clock)` / `$(calendar)` / `$(warning)` / `$(circle-slash)` のみで構成しています）。
 
 The `package.json` doesn't set an `icon` field yet (`icon.png` hasn't been created). Before publishing to the Marketplace, add a trademark-conscious original 128x128 `icon.png` and set `"icon": "icon.png"` in `package.json`. `resources/icons/` is unused for the same reason — the status bar display is built entirely from VS Code's built-in codicons (`$(clock)` / `$(calendar)` / `$(warning)` / `$(circle-slash)`).
 

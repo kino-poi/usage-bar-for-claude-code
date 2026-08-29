@@ -1,0 +1,69 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Usage Bar for Claude Code icon</title>
+<desc>Rounded square badge with a dark espresso-graphite gradient background, containing two side-by-side glossy capsule gauges filled with a vivid amber-to-red gradient, evoking two usage percentage readouts shown next to each other.</desc>
+<defs>
+<linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#3C2C22"/>
+<stop offset="55%" stop-color="#231A16"/>
+<stop offset="100%" stop-color="#120D0B"/>
+</linearGradient>
+
+<linearGradient id="shadeGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+<stop offset="75%" stop-color="#000000" stop-opacity="0"/>
+<stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+</linearGradient>
+
+<radialGradient id="glossGrad" cx="35%" cy="18%" r="55%">
+<stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.14"/>
+<stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+<stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+</radialGradient>
+
+<linearGradient id="fillL" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#FFD37A"/>
+<stop offset="100%" stop-color="#FFA23E"/>
+</linearGradient>
+<linearGradient id="fillR" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#FF8A3D"/>
+<stop offset="100%" stop-color="#E23A1A"/>
+</linearGradient>
+
+<clipPath id="badgeClip">
+<rect x="8" y="8" width="112" height="112" rx="28"/>
+</clipPath>
+<clipPath id="capL">
+<rect x="24" y="24" width="34" height="80" rx="17"/>
+</clipPath>
+<clipPath id="capR">
+<rect x="70" y="24" width="34" height="80" rx="17"/>
+</clipPath>
+</defs>
+
+<rect x="8" y="8" width="112" height="112" rx="28" fill="url(#badgeGrad)"/>
+
+<g clip-path="url(#badgeClip)">
+<rect x="8" y="8" width="112" height="112" fill="url(#shadeGrad)"/>
+<ellipse cx="44" cy="26" rx="70" ry="34" fill="url(#glossGrad)"/>
+</g>
+
+<rect x="8" y="8" width="112" height="112" rx="28" fill="none" stroke="#5C4230" stroke-opacity="0.5" stroke-width="1"/>
+
+<rect x="24" y="24" width="34" height="80" rx="17" fill="#FFFFFF" opacity="0.10"/>
+<rect x="70" y="24" width="34" height="80" rx="17" fill="#FFFFFF" opacity="0.10"/>
+
+<g clip-path="url(#capL)">
+<rect x="24" y="66" width="34" height="38" fill="url(#fillL)"/>
+<rect x="24" y="64" width="34" height="5" fill="#FFFFFF" opacity="0.5"/>
+</g>
+<g clip-path="url(#capR)">
+<rect x="70" y="46" width="34" height="58" fill="url(#fillR)"/>
+<rect x="70" y="44" width="34" height="5" fill="#FFFFFF" opacity="0.5"/>
+</g>
+
+<rect x="27" y="29" width="3" height="70" rx="1.5" fill="#FFFFFF" opacity="0.3"/>
+<rect x="73" y="29" width="3" height="70" rx="1.5" fill="#FFFFFF" opacity="0.3"/>
+
+<rect x="24" y="24" width="34" height="80" rx="17" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.5"/>
+<rect x="70" y="24" width="34" height="80" rx="17" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.5"/>
+</svg>
