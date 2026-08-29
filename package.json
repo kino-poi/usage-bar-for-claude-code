@@ -2,7 +2,7 @@
   "name": "usage-bar-for-claude-code",
   "displayName": "Usage Bar for Claude Code",
   "description": "Shows Claude Code's 5-hour and 7-day rate limit usage in the VS Code status bar, sourced from Claude Code's statusLine hook.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "kino-poi",
   "icon": "icon.png",
   "license": "MIT",

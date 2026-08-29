@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-08-29
+
+### Added
+
+- READMEにステータスバーのスクリーンショット（通常時・警告/危険マーカー表示時）を追加。
+
 ## [0.1.0] - 2026-08-29
 
 ### Added
@@ -25,5 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - 共有ファイルのパス・閾値・ポーリング間隔・古いデータ判定・自動セットアップの
   オンオフを設定できる`usageBar.*`設定群。
 
-[Unreleased]: https://github.com/kino-poi/usage-bar-for-claude-code/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/kino-poi/usage-bar-for-claude-code/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/kino-poi/usage-bar-for-claude-code/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/kino-poi/usage-bar-for-claude-code/releases/tag/v0.1.0

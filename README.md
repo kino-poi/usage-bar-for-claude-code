@@ -66,7 +66,14 @@ The shared file is not updated while no Claude Code session is running. In that 
 
 ## セットアップ手順 / Setup
 
-1. 拡張機能をインストールする。 / Install the extension.
+1. 拡張機能をインストールする。以下のいずれかの方法で:
+   Install the extension, using any of the following:
+   - VS Codeの拡張機能ビュー（`Ctrl+Shift+X`）で `Usage Bar for Claude Code` を検索して「Install」
+     Search `Usage Bar for Claude Code` in VS Code's Extensions view (`Ctrl+Shift+X`) and click Install
+   - コマンドラインから: `code --install-extension kino-poi.usage-bar-for-claude-code`
+     From the command line: `code --install-extension kino-poi.usage-bar-for-claude-code`
+   - [VS Code Marketplaceのページ](https://marketplace.visualstudio.com/items?itemName=kino-poi.usage-bar-for-claude-code)を直接開いて「Install」
+     Open the [VS Code Marketplace page](https://marketplace.visualstudio.com/items?itemName=kino-poi.usage-bar-for-claude-code) directly and click Install
 2. 初回起動時に「Claude Code の statusLine にレート制限情報を渡すブリッジスクリプトを設定しますか？」という確認ダイアログが表示されるので、「今すぐ設定」を選ぶ。
    On first activation, a confirmation dialog asks whether to set up the bridge script that feeds rate-limit info into Claude Code's `statusLine`. Choose "今すぐ設定" (Set up now).
    - このダイアログは初回のみ表示されます。「後で」を選んだ・閉じた場合は、コマンドパレットから **`Usage Bar: Setup Claude Code Bridge`** をいつでも実行できます。
