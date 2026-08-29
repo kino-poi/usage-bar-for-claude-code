@@ -24,6 +24,20 @@ For the detailed design and the rationale behind design decisions, see [`docs/DE
 
 ---
 
+## スクリーンショット / Screenshot
+
+通常時（左）と、5h/7dそれぞれが警告(🟡)・危険(🔴)しきい値を超えた時（右）のステータスバー表示です。
+
+The status bar in its normal state (left), and with 5h/7d each past the warning (🟡) / critical (🔴) threshold (right).
+
+<p>
+  <img src="resources/screenshot-normal.png" alt="通常時のステータスバー表示 / Status bar in its normal state" height="24">
+  &nbsp;&nbsp;
+  <img src="resources/screenshot-markers.png" alt="警告・危険マーカーが付いたステータスバー表示 / Status bar showing the warning and critical markers" height="24">
+</p>
+
+---
+
 ## 仕組み / How it works
 
 ```
