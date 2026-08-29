@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-08-29
+
 ### Added
 
 - Claude Codeの5時間/7日レート制限使用率を表示するステータスバーアイテム
@@ -22,3 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   理由は[`docs/DESIGN.md`](docs/DESIGN.md) 4章を参照。
 - 共有ファイルのパス・閾値・ポーリング間隔・古いデータ判定・自動セットアップの
   オンオフを設定できる`usageBar.*`設定群。
+
+[Unreleased]: https://github.com/kino-poi/usage-bar-for-claude-code/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/kino-poi/usage-bar-for-claude-code/releases/tag/v0.1.0
