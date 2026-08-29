@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 - READMEにステータスバーのスクリーンショット（通常時・警告/危険マーカー表示時）を追加。
+- READMEのセットアップ手順に、拡張機能のインストール方法（拡張機能ビュー検索・
+  拡張機能ID指定のCLIインストール・Marketplaceページ直接）を具体的に記載。
 
 ## [0.1.0] - 2026-08-29
 
