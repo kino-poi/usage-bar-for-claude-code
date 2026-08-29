@@ -4,6 +4,7 @@ src/**
 test/**
 docs/**
 .github/**
+tmp/**
 .eslintrc.json
 .gitignore
 esbuild.js
