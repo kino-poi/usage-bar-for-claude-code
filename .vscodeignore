@@ -5,7 +5,7 @@ test/**
 docs/**
 .github/**
 tmp/**
-.eslintrc.json
+eslint.config.mjs
 .gitignore
 esbuild.js
 tsconfig.json
