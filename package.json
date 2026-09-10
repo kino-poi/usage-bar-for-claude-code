@@ -99,7 +99,7 @@
     "@eslint/eslintrc": "^3.3.6",
     "@eslint/js": "^10.0.1",
     "@types/node": "^26.4.0",
-    "@types/vscode": "^1.98.0",
+    "@types/vscode": "^1.136.0",
     "@typescript-eslint/eslint-plugin": "^8.68.0",
     "@typescript-eslint/parser": "^8.68.0",
     "@vscode/test-electron": "^3.1.0",
